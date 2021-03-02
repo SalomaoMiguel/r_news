@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>G2</title>
+  <meta name="SalomaoCruz" content="9rts" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="G2 - Site G2-teste" />
+  <meta name="description" content="G2 - Site G2-teste" />
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'sort', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'sort', 'data-turbolinks-track': 'reload' %>
+</head>
+<!-- Body Start -->
+<body data-spy="scroll" data-target="#navbar" data-offset="98">
+<!-- page loading -->
+<div id="loading">
+  <div class="load-circle"><span class="one"></span></div>
+</div>
+<%= yield %>
+<script type="text/javascript">
+    $().ready(function() {
+        setTimeout(function () {
+            $('.foo').hide(); // "foo" é o id do elemento que seja manipular.
+        }, 5500); // O valor é representado em milisegundos.
+    });
+</script>
+</body>
+</html>

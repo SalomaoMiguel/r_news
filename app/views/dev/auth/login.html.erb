@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>G2</title>
+  <meta name="SalomaoCruz" content="9rts" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="G2 - Site G2-teste" />
+  <meta name="description" content="G2 - Site G2-teste" />
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'sort', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'sort', 'data-turbolinks-track': 'reload' %>
+</head>
+<!-- Body Start -->
+
+<body data-spy="scroll" data-target="#navbar" data-offset="98">
+<!-- page loading -->
+<div id="loading">
+  <div class="load-circle"><span class="one"></span></div>
+</div>
+<!-- end page loading -->
+<!-- Main -->
+<main>
+  <section class="section_ground">
+    <% if notice %>
+      <div class="alert alert-warning alert-dismissible fade show foo" role="alert">
+        <strong><%= notice %></strong>
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span class="font-weight-light" aria-hidden="true">×</span></button>
+      </div>
+      <% end %>
+    <div class="container">
+      <div class="row align-items-center justify-content-center min-vh-100">
+        <div class="col-md-6 col-xl-5 p-40px-tb">
+          <div class="p-40px white-bg box-shadow border-radius-10">
+            <div class="p-20px-b text-center">
+              <h3 class="font-w-600 dark-color m-10px-b"><%= image_tag('logo/logo.png') %></h3>
+              <p>Logue em seu perfil e continue.</p>
+              <% if flash[:error] %>
+                <div  class="row text-center justify-content-between align-items-center mb-2 foo">
+                  <div class="col-auto w-100">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      <strong><%= flash[:error] %></strong>
+                      <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span class="font-weight-light" aria-hidden="true">×</span></button>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+            <%= form_tag(dev_auth_login_path, method: :post) do |f| %>
+            <form>
+              <div class="form-group">
+                <label class="form-control-label">Email</label>
+                <%= email_field_tag :email, "", class:'form-control' , required: true, placeholder: 'E-mail...'%>
+              </div>
+              <div class="form-group">
+                <label class="form-control-label">Senha</label>
+                <%= password_field_tag :senha, "", class:'form-control' , required: true, placeholder: '****' %>
+              </div>
+              <div class="p-10px-t">
+                <%= submit_tag "Entrar", class:'m-btn m-btn-theme m-btn-radius w-100', data:{disable_with: "Verificando Autenticação..."} %>
+              </div>
+              <div class="p-10px-tb text-center">
+                <small>Se não registrado</small>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 m-5px-tb">
+                  <%= link_to  dev_root_path, class:'m-btn m-btn-t-gray m-btn-radius w-100' do %>
+                                            <span class="btn-inner-icon">
+                                              <%= image_tag"img/effect/home.png", title: '', alt:'' %>
+                                            </span>
+                    <span class="btn-inner-text">
+                                                Voltar
+                                            </span>
+                  <% end %>
+                </div>
+                <div class="col-sm-6 m-5px-tb">
+                  <a class="m-btn m-btn-t-gray m-btn-radius w-100" data-toggle="modal" data-target="#exampleModalCenter">
+                                            <span class="btn-inner-icon">
+                                                <%= image_tag"img/effect/favpng_user.png", title: '', alt:'' %>
+                                            </span>
+                    <span class="btn-inner-text">
+                                               Conta
+                                            </span>
+                  </a>
+                </div>
+              </div>
+              <div class="m-20px-t text-center"><small></small> <a  class="small font-weight-bold">G2 News</a></div>
+            </form>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- main end -->
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Cadastro</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render 'new' %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    $().ready(function() {
+        setTimeout(function () {
+            $('.foo').hide(); // "foo" é o id do elemento que seja manipular.
+        }, 5500); // O valor é representado em milisegundos.
+    });
+</script>
+</body>
+<!-- end body -->
+</html>

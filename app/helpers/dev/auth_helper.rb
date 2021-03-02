@@ -1,0 +1,2 @@
+module Dev::AuthHelper
+end

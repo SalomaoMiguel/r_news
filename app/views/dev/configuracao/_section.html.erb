@@ -1,0 +1,95 @@
+<!-- Header -->
+<header class="header-nav header-dark header-height">
+  <div class="fixed-header-bar">
+    <div class="container container-large">
+      <div class="navbar navbar-default navbar-expand-lg main-navbar">
+        <div class="navbar-brand">
+          <a href="#" title="Mombo" class="logo">
+            <%= image_tag("logo/logo.png", alt:'', title:'', width: 150, height: 50) %>
+          </a>
+        </div>
+        <div class="navbar-collapse justify-content-end collapse m-auto mr-md-auto ml-md-auto" id="navbar-collapse-toggle">
+          <ul class="nav navbar-nav  ">
+            <li><i class="fas fa-home text-white"> </i><%= link_to "Home",  dev_board_board_geral_path,  class:'nav-link' %> </li>
+            <li><i class="fas fa-cog text-white"> </i><%= link_to "Configurações",  dev_configuracao_profile_path,  class:'nav-link' %> </li>
+          </ul>
+        </div>
+        <div class="extra-menu d-flex align-items-center">
+          <div class="d-none d-md-block h-btn m-35px-l">
+          </div>
+          <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar-collapse-toggle" aria-expanded="false">
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Header End -->
+<div class="profile-aside">
+  <div class="card m-20px-b">
+    <div class="p-25px text-center">
+      <div class="avatar-80 border-radius-50 d-inline-block">
+        <%=  image_tag('img/effect/user.jpeg') %>
+      </div>
+      <h6 class="font-w-500 m-15px-t m-0px"><span class="font-w-700"><%= @usuario.nome %></span></h6>
+      <span class="font-small"><%= @usuario.email %></span>
+      <div class="p-10px-t">
+      </div>
+    </div>
+  </div>
+  <div class="card m-20px-b">
+    <div class="card-header">
+      <h6 class="m-0px">Conta</h6>
+    </div>
+    <div class="list-group list-group-flush">
+      <%= link_to dev_configuracao_profile_path, class:"list-group-item #{section_order == 'profile' ? 'text-primary' : ''} list-group-item-action d-flex justify-content-between p15px-tb " do %>
+        <div>
+          <i class="far fa-user-circle m-10px-r"></i>
+          <span class="">Perfil</span>
+        </div>
+        <div>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      <% end %>
+      <%= link_to dev_configuracao_profile_edit_path, class:"list-group-item #{section_order == 'profile_edit' ? 'text-primary' : ''} list-group-item-action d-flex justify-content-between p15px-tb " do %>
+        <div>
+          <i class="fas fa-cog m-10px-r"></i>
+          <span>Editar Perfil</span>
+        </div>
+        <div>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      <% end %>
+      <%= link_to dev_configuracao_convite_path, class:"list-group-item #{section_order == 'invite' ? 'text-primary' : ''} list-group-item-action d-flex justify-content-between p15px-tb " do %>
+        <div>
+          <i class="far fa-smile m-10px-r"></i>
+          <span>Convites</span>
+        </div>
+        <div>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      <% end %>
+      <% if User.where(master: true).first %>
+      <%= link_to dev_configuracao_noticia_path, class:"list-group-item #{section_order == 'news' ? 'text-primary' : ''} list-group-item-action d-flex justify-content-between p15px-tb " do %>
+        <div>
+          <i class="far fa-newspaper m-10px-r"></i>
+          <span>Criar Notícias</span>
+        </div>
+        <div>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      <% end %>
+      <%= link_to dev_configuracao_usuario_path, class:"list-group-item #{section_order == 'news' ? 'text-primary' : ''} list-group-item-action d-flex justify-content-between p15px-tb " do %>
+        <div>
+          <i class="far fa-user m-10px-r"></i>
+          <span>Usuários</span>
+        </div>
+        <div>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

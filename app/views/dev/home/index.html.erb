@@ -1,0 +1,262 @@
+<body data-spy="scroll" data-target="#navbar" data-offset="98">
+<!-- page loading -->
+<div id="loading">
+  <div class="load-circle"><span class="one"></span></div>
+</div>
+<!-- end page loading -->
+<!-- Header -->
+<header class="header-nav header-white">
+  <div class="fixed-header-bar">
+    <div class="container container-large">
+      <div class="navbar navbar-default navbar-expand-lg main-navbar">
+        <div class="navbar-brand">
+          <a href="#" title="Mombo" class="logo">
+            <%= image_tag("logo/logo_white.png", class:'light-logo', alt:'', title:'', width: 150, height: 50) %>
+            <%= image_tag("logo/logo.png", class:'dark-logo', alt:'', title:'', width: 150, height: 50) %>
+          </a>
+        </div>
+        <div class="navbar-collapse justify-content-end collapse" id="navbar-collapse-toggle">
+        </div>
+        <div class="extra-menu d-flex align-items-center">
+          <div class="d-none d-md-block h-btn m-35px-l">
+            <%= link_to "ENTRAR", dev_auth_login_path, class:'m-btn  btn-md m-btn-theme m-btn-radius' %>
+          </div>
+          <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar-collapse-toggle" aria-expanded="false">
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Header End -->
+<!-- Main -->
+<main>
+  <!-- Page Title -->
+  <section class="section bg-center bg-cover bg-fixed effect-section" >
+    <div class="mask theme-bg opacity-9"></div>
+    <div class="container">
+      <div class="row justify-content-center p-50px-t">
+        <div class="col-lg-8 text-center">
+          <h2 class="white-color h1 m-20px-b">G2 - Portal de Notícias</h2>
+          <ol class="breadcrumb white justify-content-center">
+            <li><a href="index.html">Notícias</a></li>
+            <li class="active">Em tempo real</li>
+          </ol>
+          <% if notice %>
+            <div class="alert alert-warning alert-dismissible fade show foo" role="alert">
+              <strong><%= notice %></strong>
+              <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span class="font-weight-light" aria-hidden="true">×</span></button>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- En Page Title -->
+
+  <!-- Section -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-md-6 m-30px-b">
+              <div class="transition hover-top card box-shadow-only-hover overflow-hidden">
+                <div>
+                  <a href="#">
+                    <%= image_tag("img/900x550.jpg", title: '', alt: '') %>
+                  </a>
+                </div>
+                <div class="p-20px">
+                  <label class="font-small">Nancy Bayers – 10 hours ago</label>
+                  <h5 class="m-10px-b font-w-600"><a class="dark-color" href="#">How to make trust your competitive advantage</a></h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                  <div class="nav font-small border-top-1 border-color-dark-gray p-15px-t">
+                    <a class="m-15px-r body-color font-w-500" href="#"><i class="fas fa-calendar-alt "></i> 30 Aug, 2019</a>
+                    <a class="body-color font-w-500" href="#"><i class="fas fa-comments"></i> 8</a>
+                    <a class="body-color font-w-500 ml-auto" href="#">Read More <i class="fas fa-chevron-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 m-30px-b">
+              <div class="transition hover-top card box-shadow-only-hover overflow-hidden">
+                <div>
+                  <a href="#">
+                    <%= image_tag("img/900x550.jpg", title: '', alt: '') %>
+                  </a>
+                </div>
+                <div class="p-20px">
+                  <label class="font-small">Nancy Bayers – 10 hours ago</label>
+                  <h5 class="m-10px-b font-w-600"><a class="dark-color" href="#">How to make trust your competitive advantage</a></h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                  <div class="nav font-small border-top-1 border-color-dark-gray p-15px-t">
+                    <a class="m-15px-r body-color font-w-500" href="#"><i class="fas fa-calendar-alt "></i> 30 Aug, 2019</a>
+                    <a class="body-color font-w-500" href="#"><i class="fas fa-comments"></i> 8</a>
+                    <a class="body-color font-w-500 ml-auto" href="#">Read More <i class="fas fa-chevron-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 m-30px-b">
+              <div class="transition hover-top card box-shadow-only-hover overflow-hidden">
+                <div>
+                  <a href="#">
+                    <%= image_tag("img/900x550.jpg", title: '', alt: '') %>
+                  </a>
+                </div>
+                <div class="p-20px">
+                  <label class="font-small">Nancy Bayers – 10 hours ago</label>
+                  <h5 class="m-10px-b font-w-600"><a class="dark-color" href="#">How to make trust your competitive advantage</a></h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                  <div class="nav font-small border-top-1 border-color-dark-gray p-15px-t">
+                    <a class="m-15px-r body-color font-w-500" href="#"><i class="fas fa-calendar-alt "></i> 30 Aug, 2019</a>
+                    <a class="body-color font-w-500" href="#"><i class="fas fa-comments"></i> 8</a>
+                    <a class="body-color font-w-500 ml-auto" href="#">Read More <i class="fas fa-chevron-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 m-30px-b">
+              <div class="transition hover-top card box-shadow-only-hover overflow-hidden">
+                <div>
+                  <a href="#">
+                    <%= image_tag("img/900x550.jpg", title: '', alt: '') %>
+                  </a>
+                </div>
+                <div class="p-20px">
+                  <label class="font-small">Nancy Bayers – 10 hours ago</label>
+                  <h5 class="m-10px-b font-w-600"><a class="dark-color" href="#">How to make trust your competitive advantage</a></h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                  <div class="nav font-small border-top-1 border-color-dark-gray p-15px-t">
+                    <a class="m-15px-r body-color font-w-500" href="#"><i class="fas fa-calendar-alt "></i> 30 Aug, 2019</a>
+                    <a class="body-color font-w-500" href="#"><i class="fas fa-comments"></i> 8</a>
+                    <a class="body-color font-w-500 ml-auto" href="#">Read More <i class="fas fa-chevron-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 m-30px-b">
+              <div class="transition hover-top card box-shadow-only-hover overflow-hidden">
+                <div>
+                  <a href="#">
+                    <%= image_tag("img/900x550.jpg", title: '', alt: '') %>
+                  </a>
+                </div>
+                <div class="p-20px">
+                  <label class="font-small">Nancy Bayers – 10 hours ago</label>
+                  <h5 class="m-10px-b font-w-600"><a class="dark-color" href="#">How to make trust your competitive advantage</a></h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                  <div class="nav font-small border-top-1 border-color-dark-gray p-15px-t">
+                    <a class="m-15px-r body-color font-w-500" href="#"><i class="fas fa-calendar-alt "></i> 30 Aug, 2019</a>
+                    <a class="body-color font-w-500" href="#"><i class="fas fa-comments"></i> 8</a>
+                    <a class="body-color font-w-500 ml-auto" href="#">Read More <i class="fas fa-chevron-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 m-30px-b">
+              <div class="transition hover-top card box-shadow-only-hover overflow-hidden">
+                <div>
+                  <a href="#">
+                    <%= image_tag("img/900x550.jpg", title: '', alt: '') %>
+                  </a>
+                </div>
+                <div class="p-20px">
+                  <label class="font-small">Nancy Bayers – 10 hours ago</label>
+                  <h5 class="m-10px-b font-w-600"><a class="dark-color" href="#">How to make trust your competitive advantage</a></h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                  <div class="nav font-small border-top-1 border-color-dark-gray p-15px-t">
+                    <a class="m-15px-r body-color font-w-500" href="#"><i class="fas fa-calendar-alt "></i> 30 Aug, 2019</a>
+                    <a class="body-color font-w-500" href="#"><i class="fas fa-comments"></i> 8</a>
+                    <a class="body-color font-w-500 ml-auto" href="#">Read More <i class="fas fa-chevron-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 p-30px-t">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 md-m-15px-tb">
+          <div class="card">
+            <div class="card-header bg-transparent">
+              <span class="h5 m-0px font-w-600 dark-color">Buscar Notícias</span>
+            </div>
+            <div class="p-20px">
+              <form class="d-flex flex-column flex-md-row m-5px-b input-group">
+                <input type="email" class="form-control mr-sm-2 mb-2 mb-sm-0" placeholder="Buscar...">
+                <button class="m-btn m-btn-theme m-btn-radius flex-shrink-0" type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+          <div class="card m-35px-t">
+            <div class="card-header bg-transparent">
+              <span class="h5 m-0px font-w-600 dark-color">Tags</span>
+            </div>
+            <div class="p-20px">
+              <div class="nav tag-cloud">
+                <a href="#">Design</a>
+                <a href="#">Development</a>
+                <a href="#">Travel</a>
+                <a href="#">Web Design</a>
+                <a href="#">Marketing</a>
+                <a href="#">Research</a>
+                <a href="#">Managment</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Section -->
+</main>
+<!-- main end -->
+<!-- Footer-->
+<footer class="dark-bg footer">
+  <div class="footer-bottom footer-border-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-right">
+          <ul class="nav justify-content-center justify-content-md-start m-5px-tb links-white font-small footer-link-1">
+            <li><a>G2 - News</a></li>
+            <li><a></a></li>
+            <li><a href="https://g1.globo.com/" target="_blank">Portal G1 - Modelo Real</a></li>
+          </ul>
+        </div>
+        <div class="col-md text-center text-md-right">
+          <p class="m-0px font-small white-color-light">© 2019 copyright all right reserved</p>
+        </div>
+        <div class="col-md text-center text-md-right">
+          <%= link_to "ENTRAR", dev_auth_login_path, class:'m-btn  m-link-theme d-lg-none m-btn-radius' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer End -->
+<script type="text/javascript">
+    $().ready(function() {
+        setTimeout(function () {
+            $('.foo').hide(); // "foo" é o id do elemento que seja manipular.
+        }, 5500); // O valor é representado em milisegundos.
+    });
+</script>
+</body>
+
+

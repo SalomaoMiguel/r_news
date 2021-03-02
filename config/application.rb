@@ -11,7 +11,7 @@ module RNews
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
-    config.time_zone = 'Brasilia' 
+    config.time_zone = 'Brasilia'  
     config.active_record.default_timezone = :local
     config.i18n.default_locale = :pt_BR
     I18n.available_locales = :es
